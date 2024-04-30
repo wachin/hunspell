@@ -54,9 +54,3 @@ target_compile_definitions(Hunspell PUBLIC
 target_link_libraries(Hunspell PUBLIC
     Qt::Core
 )
-
-install(TARGETS Hunspell
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    FRAMEWORK DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
