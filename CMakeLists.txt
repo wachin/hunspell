@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+target_link_libraries(Hunspell PUBLICcmake_minimum_required(VERSION 3.16)
 project(Hunspell VERSION 1.0 LANGUAGES C CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -54,3 +54,10 @@ target_compile_definitions(Hunspell PUBLIC
 target_link_libraries(Hunspell PUBLIC
     Qt::Core
 )
+
+install(TARGETS Hunspell
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    FRAMEWORK DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
+
